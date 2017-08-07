@@ -1,0 +1,468 @@
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+    margin: 0 auto
+    padding: 0
+    font-size: 14px
+    line-height: 1
+    font-family: $default-font
+    color: $text_color
+    background-color: #fff
+    overflow-x: hidden
+    opacity: 1
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+.wrapper
+    width: 1170px
+.wrap_site
+    min-width: 320px
+    max-width: 1680px
+    margin: 0 auto
+    padding-top: 79px
+    background-color: #fff
+section
+    position: relative
+    padding: 30px 0
+    .overlay
+        position: absolute
+        width: 100%
+        height: 100%
+        left: 0
+        top: 0
+        background-color: rgba(0,0,0,.6)
+        z-index: 1
+    .wrap_section_title
+        position: relative
+        margin: 20px 0 30px
+        text-align: center
+    .section_title_lines
+        position: absolute
+        left: 0
+        top: 9px
+        height: 15px
+        width: 100%
+        border-top: 2px solid $text_color
+        border-bottom: 2px solid $text_color
+        z-index: 1
+    .section_title_center
+        display: inline-block
+        position: relative
+        padding: 0 10px
+        background-color: #fff
+        z-index: 2
+    .section_title
+        margin: 0
+        font-family: $special_font
+        font-size: 28px
+        text-transform: uppercase
+        
+/*-----------------------------------СТИЛИ ДЛЯ ЯКОРЯ------------------------------------------------------*/
+.anchor
+    position: absolute
+    top: -50px
+/*-----------------------------------СТИЛИ ДЛЯ КНОПОК-----------------------------------------------------*/
+.wrap_btn
+    text-align: center
+    padding-top: 20px
+/*-----------------------------Стили для панели навигации и хедера----------------------------------------*/
+.site_header
+    .navbar
+        width: 100%
+        padding: 10px 30px 10px 30px
+        background-color: $header_color
+        border: none
+        box-shadow: none
+        box-shadow: 0 2px 5px rgba(0,0,0,.3)
+    .navbar-collapse
+        text-align: center
+    .nav
+        display: inline-block
+        vertical-align: middle
+        float: none
+        margin: 0
+        padding: 0
+        li
+            a
+                display: inline-block
+                margin: 10px 5px 0
+                padding: 5px 10px
+                font-family: $special_font
+                color: $special_text_color
+                font-size: 18px
+                border: 1px solid #eee
+                border-radius: 2px
+                background-color: $header_color
+                transition: background .4s ease
+                &:hover,
+                &:active,
+                &.active,
+                &:focus
+                    color: #eee
+                &:hover
+                    background-color: darken($header_color,7%)
+    .navbar-header
+        .navbar-brand
+            height: 60px
+            width: 127px
+            padding: 0
+            line-height: 0
+            img
+                max-height: 60px
+                max-width: 127px
+                width: 100%
+                height: auto
+    .navbar-default
+        background-color: $header_color
+    .navbar-toggle
+        border: 2px solid $special_text_color
+        background-color: $header_color
+        &:hover,
+        &:focus
+            background-color: $header_color
+        .icon-bar
+            background-color: $special_text_color
+    .navbar-text
+        padding-left: 24px
+        color: $special_text_color
+        font-size: 20px
+        background: url(../img/phone_icon.png) 0 0 no-repeat
+        background-size: contain
+        
+/*---------------------------------СЕКЦИЯ ОБЕРТКИ ГЛАВНОГО КОНТЕНТА----------------*/
+.site_content
+    padding-bottom: 30px
+    
+/*--------------------------------Главная секция-----------------------------------*/
+.main_section
+    padding: 0
+    .wrap_main_left,
+    .wrap_main_right
+        position: relative
+        padding: 0
+        box-shadow: 0 2px 5px rgba(0,0,0,.3)
+    .main_left
+        height: 700px
+        background: url(../img/main_bg.jpg) center center no-repeat
+        background-size: cover
+    .overlay
+        position: absolute
+        width: 100%
+        height: 100%
+        left: 0
+        top: 0
+        background-color: rgba(0,0,0,.6)
+        z-index: 1
+    .wrap_main
+        position: relative
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        flex-flow: column nowrap
+        justify-content: center
+        align-items: center
+        align-content: stretch
+        height: 700px
+        padding: 20px
+        text-align: center
+        z-index: 2
+    .main_title
+        color: $special_text_color
+        font-size: 36px
+        text-shadow: 1px 1px 2px #000
+    .main_desc
+        color: #ff0
+        font-size: 20px
+        text-shadow: 1px 1px 2px #000
+    .main_right
+        background-color: #fff
+        height: 700px
+        padding: 50px 0
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        flex-flow: column nowrap
+        justify-content: space-around
+        align-items: center
+        align-content: stretch
+    .main_right_item
+        display: table
+        width: 150px
+        height: 150px
+        font-family: $special_font
+        color: $special_text_color
+        text-align: center
+        text-transform: uppercase
+        border-radius: 50%
+        background-color: $header_color
+        span
+            display: table-cell
+            vertical-align: middle
+
+/*-------------------------------------СЕКЦИЯ УСЛУГ------------------------------------------------------------*/
+.serv_section
+    position: relative
+    padding: 30px 0
+    .wrap_tabs
+        padding: 30px
+        border: 1px solid $header_color
+        border-radius: 3px
+    .nav-tabs
+        text-align: center
+        border-bottom: none
+    .nav-tabs>li
+        display: inline-block
+        float: none
+    .nav-tabs>li>a,
+    .nav-tabs>li>a:hover
+        margin: 10px 5px
+        color: $header_color
+        border: 1px solid $header_color
+        border-radius: 2px
+    .nav-tabs>li.active>a, 
+    .nav-tabs>li.active>a:focus,
+    .nav-tabs>li.active>a:hover
+        color: $special_text_color
+        background-color: $header_color
+        border: 1px solid $header_color
+        border-radius: 2px
+    .serv_item
+        max-width: 980px
+        margin: 0 auto
+    .serv_item_title
+        margin: 20px 0 10px
+        text-align: center
+        font-size: 20px
+    .serv_item_img
+        text-align: center
+        img
+            margin-bottom: 10px
+            max-height: 300px
+            max-width: 300px
+            width: 100%
+            height: auto
+
+/*-----------------------------------СЕКЦИЯ СО СЛАЙДЕРОМ----------------------------------*/
+.works_section
+    .wrap_slider
+        max-width: 600px
+        max-height: 400px
+        width: 100%
+        height: auto
+        margin: 20px auto
+        box-shadow: 0 2px 5px rgba(0,0,0,.3)
+        img
+            max-width: 600px
+            max-height: 400px
+            width: 100%
+            height: auto
+        .right
+            background: url(../img/right_arrow.png) center center no-repeat
+        .left
+            background: url(../img/left_arrow.png) center center no-repeat
+            
+/*------------------------------СЕКЦИЯ С ТИЗЕРАМИ-------------------------------------------*/
+.teasers_section
+    padding: 50px 0
+    text-align: center
+    color: #eee
+    background: url(../img/tisers_bg.jpg) no-repeat fixed center center
+    background-size: cover
+    box-shadow: 0 2px 5px rgba(0,0,0,.3)
+    .wrap_teasers
+        position: relative
+        z-index: 2
+    .teasers_item
+        display: table
+        width: 180px
+        height: 180px
+        margin: 20px auto
+        text-align: center
+        border: 2px solid $special_text_color
+        border-radius: 50%
+        .tisers_item_wrap
+            display: table-cell
+            vertical-align: middle
+        .glyphicon
+            font-size: 30px
+        p
+            margin-top: 10px
+            padding: 0 10px
+            font-family: $special_font
+            text-transform: uppercase
+            font-size: 14px
+            line-height: 1.3
+            text-shadow: 2px 2px 2px #111
+            
+/*--------------------------------------СЕКЦИЯ О КЛИЕНТАХ-------------------------------------*/
+.clients_section
+    background-color: #E9D432
+    .section_title_center
+        background-color: #E9D432
+    .clients_item
+        margin: 20px auto
+        text-align: center
+        img
+            width: 180px
+            height: 180px
+            border-radius: 50%
+    p
+        margin-top: 10px
+        padding: 0 10px
+        font-family: $special_font
+        text-transform: uppercase
+        font-size: 14px
+        line-height: 1.3
+        
+/*--------------------------------------СЕКЦИЯ ТЕХНОЛОГИИ ОКЛЕЙКИ--------------------------------*/
+.technology_section
+    .wrap_technology_item
+        padding: 0
+    .technology_item
+        position: relative
+        max-width: 450px
+        max-height: 300px
+        width: 100%
+        height: auto
+        margin: auto
+        &:hover
+            p
+                opacity: 1
+    .technology_item_img
+        position: relative
+        top: 0
+        left: 0
+        z-index: 1
+    img
+        max-width: 450px
+        max-height: 300px
+        width: 100%
+        height: auto
+    .technology_item_desc
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        padding: 15px
+        z-index: 2
+        p
+            padding: 10px
+            font-size: 15px
+            line-height: 1.3
+            color: $special_text_color
+            background-color: rgba(0,0,0,.6)
+            border-radius: 3px
+            opacity: 0
+            transition: opacity .5s ease
+    .wrap_technology_title
+        position: absolute
+        left: 0
+        bottom: 0
+        padding: 15px
+        span
+            display: inline-block
+            width: 50px
+            height: 50px
+            margin-right: 5px
+            font-size: 22px
+            text-align: center
+            line-height: 50px
+            color: $text_color
+            border-radius: 50%
+            background-color: #e8c04d
+        h3
+            display: inline-block
+            padding: 5px 7px
+            font-family: $special_font
+            font-size: 17px
+            text-transform: uppercase
+            border-radius: 3px
+            background-color: rgba(255,255,255,.8)
+        
+/*--------------------------------------СЕКЦИЯ С КАРТОЙ------------------------------------------*/
+.contacts_section
+    .wrap_map
+        width: 100%
+        height: 450px
+        margin-bottom: 20px
+        box-shadow: 0 2px 5px rgba(0,0,0,.3)
+    .contact_item
+        font-size: 18px
+        margin: 0 0 20px 0
+        b
+            display: inline-block
+            margin-bottom: 5px
+            padding: 5px 10px
+            color: #eee
+            font-weight: normal
+            border-radius: 4px
+            background-color: $header_color
+            box-shadow: 0 2px 5px rgba(0,0,0,.3)
+        .glyphicon
+            margin-right: 5px
+        p
+            padding: 5px 10px
+            color: $header_color
+            border: 1px solid $header_color
+            border-radius: 4px
+            box-shadow: 0 2px 5px rgba(0,0,0,.3)
+            
+/*--------------------------------------------ФУТЕР САЙТА-----------------------------------------------------------*/
+.site_footer
+    padding: 50px 0 20px
+    background: url(../img/footer_bg.jpg) repeat 0 0
+    .footer_line
+        height: 1px
+        margin: 20px 0
+        background-color: #b9b9b9
+    .copyright
+        font-size: 12px
+        font-style: italic
+        
+            
+            
+
+@import "media" // Всегда в конце
